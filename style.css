@@ -9,7 +9,13 @@
     /* Day-planner */
     --d1 : #2D3036;
     --d2 : #ff5c34;
-    --d3 : #f3eee7;
+    --d3 : #eadcc9;
+
+    /* Motivational quotes  */
+    --m1 : #55443a;
+    --m2 : #cfd0cd;
+    --m3 : #4d2308;
+    --m4 : #8a9992;
 
 }
 
@@ -404,4 +410,92 @@ section.allElems
     font-size: 20px;
     padding-top: 28px;
     outline: none;
+}
+
+
+.motivational-fullpage 
+{
+    display: block;
+    position: relative;
+}
+
+.motivational-fullpage .motivation-container 
+{
+    height: 500px;
+    width: 80%;
+    border-radius: 50px;
+    background: wheat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.motivational-fullpage .motivation-container::after 
+{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--m1);
+    border-radius: 50px;
+    scale: 1.15;
+    filter:blur(110px);
+    z-index: 8;
+}
+
+
+.motivational-fullpage .motivation-container .motivation-wrapper 
+{
+    z-index: 10;
+    position: absolute;
+
+    width: 100%;
+    background-color: var(--m2);
+    border-radius: 40px;
+    padding: 13px;
+}
+
+
+.motivation-1
+{
+    height: 60px;
+    background-color: var(--m4);
+    padding: 13px;
+    border-radius: 40px;
+}
+
+.motivation-1 h2 
+{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.motivation-2 h2
+{
+    font-size: 75px;
+    font-weight: 500;
+    color: var(--m3);
+    margin-top: 30px;
+}
+
+
+.motivation-3 
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+
+.motivation-3 h2
+{
+    height: 60px;
+    background-color: var(--m4);
+    padding: 13px;
+    width: fit-content;
+    border-radius: 40px;
+    text-align: right;
 }
