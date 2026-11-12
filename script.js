@@ -120,3 +120,7 @@ function dailyPlanner()
 
 
 dailyPlanner(); 
+
+
+let abc = fetch("https://dummyjson.com/quotes/random")
+console.log(abc)
