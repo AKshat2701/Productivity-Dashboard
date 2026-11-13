@@ -143,3 +143,39 @@ function motivationalQuote()
 
 motivationalQuote();
 
+
+
+
+let timer = document.querySelector(".pomo-timer h1")
+var startBtn = document.querySelector(".pomo-timer .start-timer")
+var pauseBtn = document.querySelector(".pomo-timer .pause-timer")
+var resetBtn = document.querySelector(".pomo-timer .reset-timer")
+
+let timerInterval = null 
+let totalSeconds = 25 * 60 ; 
+
+
+function updateTimer() 
+{
+    let minutes = Math.floor(totalSeconds/60);
+    let seconds = totalSeconds % 60 ;
+
+
+    timer.innerHTML = `${minutes}:${seconds}`
+}
+
+setInterval(() => {
+    totalSeconds--;
+    updateTimer()
+},1000)
+
+function startTimer() 
+{
+    timerInterval = setInterval(function() {
+        totalSeconds--;
+        updateTimer();
+    },1000)
+}
+
+
+startBtn.addEventListener("click", startTimer)

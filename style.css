@@ -499,3 +499,49 @@ section.allElems
     text-align: right;
 
 }
+
+
+.pomodoro-fullpage
+{
+    display: block;
+}
+
+
+.pomodoro-fullpage h2 
+{
+    font-size: 50px;
+}
+
+
+.pomodoro-fullpage .pomo-timer
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.pomo-timer h1 
+{
+    font-size: 170px;
+}
+
+
+.pomo-timer button 
+{
+    background-color: var(--tri1);
+    padding: 15px 40px ;
+    font-size: 40px;
+    margin: 10px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 6px 8px 10px black;
+    transition: all ease 0.2s;
+}
+
+
+.pomo-timer button:active
+{
+    box-shadow: 0px 0px 0px black;
+}
